@@ -20,7 +20,7 @@
 	<span></span>		        
 </label>
 ```
-h1+p `选择紧接在另一个元素后的元素，而且二者有相同的父元素。只会选择第一个相邻的匹配元素。`
+`注：h1+p 选择紧接在另一个元素后的元素，而且二者有相同的父元素。只会选择第一个相邻的匹配元素。`
 ```css
 .m-switch{display: inline-block; position: relative; cursor: pointer; user-select: none; padding-right: 10px;}
 .m-switch input[type="checkbox"]{opacity: 0; position: absolute;}

@@ -1,0 +1,42 @@
+<!DOCTYPE html><html><head><title>纯css实现 switch开关</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+<hr>
+
+
+
+<h2 id="纯css实现-switch开关">纯css实现 switch开关</h2>
+
+<blockquote>
+  <p>直接看代码，利用了css3兄弟选择器    —— <a href="https://minhui1.github.io/note/switch.html" target="_blank">dome</a></p>
+</blockquote>
+
+
+
+<h3 id="代码块">代码块</h3>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-htmlbars hljs"><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-switch"</span>&gt;</span>            </span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>               </span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"m-switch"</span>&gt;</span>            </span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"checkbox"</span> <span class="hljs-attr">checked</span>=<span class="hljs-string">"checked"</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>               </span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span></span>
+</div></code></pre>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-css hljs"><div class="hljs-line"><span class="hljs-selector-class">.m-switch</span>{<span class="hljs-attribute">display</span>: inline-block; <span class="hljs-attribute">position</span>: relative; <span class="hljs-attribute">cursor</span>: pointer; <span class="hljs-attribute">user-select</span>: none; <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">10px</span>;}
+</div><div class="hljs-line"><span class="hljs-selector-class">.m-switch</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="checkbox"]</span>{<span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>; <span class="hljs-attribute">position</span>: absolute;}
+</div><div class="hljs-line"><span class="hljs-selector-class">.m-switch</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="checkbox"]</span> + <span class="hljs-selector-tag">span</span>{<span class="hljs-attribute">position</span>: relative; <span class="hljs-attribute">display</span>: inline-block; <span class="hljs-attribute">box-sizing</span>: border-box; <span class="hljs-attribute">width</span>: <span class="hljs-number">40px</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">24px</span>; <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>; <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0.09375em</span> <span class="hljs-number">#ebebeb</span>; <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">30px</span>; <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.3s</span> <span class="hljs-built_in">cubic-bezier</span>(0.17, 0.67, 0.43, 0.98);}
+</div><div class="hljs-line"><span class="hljs-selector-class">.m-switch</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="checkbox"]</span><span class="hljs-selector-pseudo">:checked</span> + <span class="hljs-selector-tag">span</span>{<span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">1.25em</span> <span class="hljs-number">#5183C6</span>;}
+</div><div class="hljs-line"><span class="hljs-selector-class">.m-switch</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="checkbox"]</span> + <span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:after</span>{<span class="hljs-attribute">position</span>: absolute; <span class="hljs-attribute">content</span>: <span class="hljs-string">''</span>; <span class="hljs-attribute">width</span>: <span class="hljs-number">22px</span>; <span class="hljs-attribute">height</span>: <span class="hljs-number">22px</span>; <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">50%</span>; <span class="hljs-attribute">top</span>: <span class="hljs-number">50%</span>; <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">translateY</span>(-50%); <span class="hljs-attribute">-ms-transform</span>: <span class="hljs-built_in">translateY</span>(-50%); <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">translateY</span>(-50%); <span class="hljs-attribute">-o-transform</span>: <span class="hljs-built_in">translateY</span>(-50%); <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translateY</span>(-50%); <span class="hljs-attribute">left</span>: <span class="hljs-number">1px</span>; <span class="hljs-attribute">background</span>: <span class="hljs-number">#fff</span>; <span class="hljs-attribute">box-shadow</span>: inset <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0.125em</span> -<span class="hljs-number">0.0625em</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.8), <span class="hljs-number">0</span> <span class="hljs-number">0.0625em</span> <span class="hljs-number">0.0625em</span> <span class="hljs-number">0.03125em</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.1), <span class="hljs-number">0</span> <span class="hljs-number">0.1875em</span> <span class="hljs-number">0.0625em</span> <span class="hljs-number">0.03125em</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.15), <span class="hljs-number">0</span> <span class="hljs-number">0.3125em</span> <span class="hljs-number">0.3125em</span> <span class="hljs-number">0</span> <span class="hljs-built_in">rgba</span>(0, 0, 0, 0.1); <span class="hljs-attribute">transition</span>: all <span class="hljs-number">0.2s</span> linear;}
+</div><div class="hljs-line"><span class="hljs-selector-class">.m-switch</span> <span class="hljs-selector-tag">input</span><span class="hljs-selector-attr">[type="checkbox"]</span><span class="hljs-selector-pseudo">:checked</span> + <span class="hljs-selector-tag">span</span><span class="hljs-selector-pseudo">:after</span>{<span class="hljs-attribute">left</span>: <span class="hljs-number">17px</span>;}
+</div></code></pre></div></body></html>

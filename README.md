@@ -44,6 +44,8 @@
 <label><em class="W-radio"><input name="" id="cc" type="radio" value=""><i></i></em><font>没选中</font></label>
 <label><em class="W-radio"><input name="" id="cc" type="radio" checked="checked" value=""><i></i></em><font>选中</font></label>
 ```
+`注：根据w3school中的说明，‘:checked‘也是一种选择器，用来选择input被checked的元素`
+
 ```css
 .W-checkbox,
 .W-radio{display: inline-block; width: 16px; height: 16px; position: relative; vertical-align: middle;}

@@ -6,7 +6,7 @@
 
 ##纯css实现 switch开关
 
-> 直接看代码，利用了css3兄弟选择器    —— [dome](https://minhui1.github.io/note/switch.html)
+> 直接看代码，利用了css3兄弟选择器    —— [dome](https://minhui1.github.io/note/aggregate.html)
 
 
 

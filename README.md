@@ -65,6 +65,7 @@
 .W-checkbox input[type="checkbox"]+i.check-disable::after{display: none; cursor: default;}
 .W-checkbox input[type="checkbox"]:checked+i.check-disable{background: none;}
 ```
+![Alt text](https://minhui1.github.io/note/images/1551936408037.jpg)
 ![Alt text](https://minhui1.github.io/note/images/1551937818968.jpg)
 
 

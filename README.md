@@ -29,6 +29,6 @@
 .m-switch input[type="checkbox"] + span:after{position: absolute; content: ''; width: 22px; height: 22px; border-radius: 50%; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); left: 1px; background: #fff; box-shadow: inset 0 0 0.125em -0.0625em rgba(0, 0, 0, 0.8), 0 0.0625em 0.0625em 0.03125em rgba(0, 0, 0, 0.1), 0 0.1875em 0.0625em 0.03125em rgba(0, 0, 0, 0.15), 0 0.3125em 0.3125em 0 rgba(0, 0, 0, 0.1); transition: all 0.2s linear;}
 .m-switch input[type="checkbox"]:checked + span:after{left: 17px;}
 ```
-
+![Alt text](https://minhui1.github.io/note/images/1551936408037.jpg)
 
 

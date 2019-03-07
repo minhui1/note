@@ -12,12 +12,12 @@
 ### 代码块
 ``` htmlbars
 <label class="m-switch">			
- <input type="checkbox">
- <span></span>		        
+	<input type="checkbox">
+	<span></span>		        
 </label>
 <label class="m-switch">			
- <input type="checkbox" checked="checked">
- <span></span>		        
+	<input type="checkbox" checked="checked">
+	<span></span>		        
 </label>
 ```
 ```css
@@ -29,5 +29,42 @@
 .m-switch input[type="checkbox"]:checked + span:after{left: 17px;}
 ```
 ![Alt text](https://minhui1.github.io/note/images/1551936408037.jpg)
+
+
+
+##[纯css实现checkbox的checked样式](https://minhui1.github.io/note/aggregate.html)
+
+> 直接看代码，纯css也能实现checked样式
+
+### 代码块
+``` htmlbars
+<label><em class="W-checkbox"><input name="" id="cc" type="checkbox" value=""><i></i></em><font>没选中</font></label>
+<label><em class="W-checkbox"><input name="" id="cc" type="checkbox" checked="checked" value=""><i></i></em><font>选中</font></label>
+<label><em class="W-radio"><input name="" id="cc" type="radio" value=""><i></i></em><font>没选中</font></label>
+<label><em class="W-radio"><input name="" id="cc" type="radio" checked="checked" value=""><i></i></em><font>选中</font></label>
+```
+```css
+.W-checkbox,
+.W-radio{display: inline-block; width: 16px; height: 16px; position: relative; vertical-align: middle;}
+.W-checkbox + font,
+.W-radio + font{margin-left: 5px; margin-right: 35px; font-size: 12px; color: #333; vertical-align: middle;}
+.W-checkbox input[type="checkbox"],
+.W-radio input[type="radio"]{width: 16px; height: 16px; opacity: 0;}
+.W-checkbox input[type="checkbox"]+i,
+.W-radio input[type="radio"]+i{width: 14px; height: 14px; border-radius: 50%; border:1px solid #DDD; background: #fff; position: absolute; top: 0; left: 0;}
+.W-checkbox input[type="checkbox"]+i{border-radius: 0;}
+.W-checkbox input[type="checkbox"]+i::after,
+.W-radio input[type="radio"]+i::after{position: absolute; left: 50%; top: 50%;}
+.W-checkbox input[type="checkbox"]+i::after{content: ''; display: inline-block; border: 1px solid #fff; border-top-width: 0; border-right-width: 0; width: 6px; height: 3px; -webkit-transform: rotate(-40deg);-moz-transform: rotate(-40deg); -ms-transform: rotate(-40deg); -o-transform: rotate(-40deg); transform: rotate(-40deg); margin: -3px 0 0 -4px;}
+.W-checkbox input[type="checkbox"]:checked+i{background: #5183C6; border-color:transparent;}
+.W-checkbox input[type="checkbox"]:checked+i::after{}
+.W-radio input[type="radio"]+i::after{content: ''; width: 6px; height: 6px; background: #fff; border-radius: 50%; margin: -3px 0 0 -3px;}
+.W-radio input[type="radio"]:checked+i{background: #5183C6; border-color:transparent;}
+.W-radio input[type="radio"]:checked+i::after{}
+.W-checkbox input[type="checkbox"]+i.check-disable {border: 1px solid rgba(224, 224, 224,.4) !important;}
+.W-checkbox input[type="checkbox"]+i.check-disable::after{display: none; cursor: default;}
+.W-checkbox input[type="checkbox"]:checked+i.check-disable{background: none;}
+```
+![Alt text](https://minhui1.github.io/note/images/1551937818968.jpg)
 
 

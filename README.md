@@ -13,12 +13,12 @@
 ### 代码块
 ``` htmlbars
 <label class="m-switch">			
-	<input type="checkbox">
-	<span></span>		        
+ <input type="checkbox">
+ <span></span>		        
 </label>
 <label class="m-switch">			
-	<input type="checkbox" checked="checked">
-	<span></span>		        
+ <input type="checkbox" checked="checked">
+ <span></span>		        
 </label>
 ```
 ```css
